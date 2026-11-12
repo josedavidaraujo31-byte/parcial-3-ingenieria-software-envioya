@@ -1,0 +1,71 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Usuario\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Usuario\Downloads\parcial-3-ingenieria-software-envioya
+plugins: cov-7.1.0
+collecting ... collected 6 items
+
+tests/test_business_customer.py::test_business_change_cases[CP39-4-urbana-1-None-7900] FAILED [ 16%]
+tests/test_business_customer.py::test_business_change_cases[CP40-10-rural-1-None-9500] FAILED [ 33%]
+tests/test_business_customer.py::test_business_change_cases[CP41-10.5-rural-1-None-8300] FAILED [ 50%]
+tests/test_business_customer.py::test_business_change_cases[CP42-10.5-nacional-1-None-8300] FAILED [ 66%]
+tests/test_business_customer.py::test_business_change_cases[CP43-4-urbana-1-ENVIO10-7100] FAILED [ 83%]
+tests/test_business_customer.py::test_business_change_cases[CP44-4-urbana-6-None-9700] FAILED [100%]
+
+================================== FAILURES ===================================
+____________ test_business_change_cases[CP39-4-urbana-1-None-7900] ____________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP39
+E   assert 9000 == 7900
+E    +  where 9000 = calc(4, 'urbana', 'empresarial', 1, None)
+____________ test_business_change_cases[CP40-10-rural-1-None-9500] ____________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP40
+E   assert 10800 == 9500
+E    +  where 10800 = calc(10, 'rural', 'empresarial', 1, None)
+___________ test_business_change_cases[CP41-10.5-rural-1-None-8300] ___________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP41
+E   assert 11300 == 8300
+E    +  where 11300 = calc(10.5, 'rural', 'empresarial', 1, None)
+_________ test_business_change_cases[CP42-10.5-nacional-1-None-8300] __________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP42
+E   assert 13200 == 8300
+E    +  where 13200 = calc(10.5, 'nacional', 'empresarial', 1, None)
+__________ test_business_change_cases[CP43-4-urbana-1-ENVIO10-7100] ___________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP43
+E   assert 8100 == 7100
+E    +  where 8100 = calc(4, 'urbana', 'empresarial', 1, 'ENVIO10')
+____________ test_business_change_cases[CP44-4-urbana-6-None-9700] ____________
+tests\test_business_customer.py:18: in test_business_change_cases
+    assert calc(weight, zone, "empresarial", day, coupon) == expected, case_id
+E   AssertionError: CP44
+E   assert 11000 == 9700
+E    +  where 11000 = calc(4, 'urbana', 'empresarial', 6, None)
+=========================== short test summary info ===========================
+FAILED tests/test_business_customer.py::test_business_change_cases[CP39-4-urbana-1-None-7900] - AssertionError: CP39
+assert 9000 == 7900
+ +  where 9000 = calc(4, 'urbana', 'empresarial', 1, None)
+FAILED tests/test_business_customer.py::test_business_change_cases[CP40-10-rural-1-None-9500] - AssertionError: CP40
+assert 10800 == 9500
+ +  where 10800 = calc(10, 'rural', 'empresarial', 1, None)
+FAILED tests/test_business_customer.py::test_business_change_cases[CP41-10.5-rural-1-None-8300] - AssertionError: CP41
+assert 11300 == 8300
+ +  where 11300 = calc(10.5, 'rural', 'empresarial', 1, None)
+FAILED tests/test_business_customer.py::test_business_change_cases[CP42-10.5-nacional-1-None-8300] - AssertionError: CP42
+assert 13200 == 8300
+ +  where 13200 = calc(10.5, 'nacional', 'empresarial', 1, None)
+FAILED tests/test_business_customer.py::test_business_change_cases[CP43-4-urbana-1-ENVIO10-7100] - AssertionError: CP43
+assert 8100 == 7100
+ +  where 8100 = calc(4, 'urbana', 'empresarial', 1, 'ENVIO10')
+FAILED tests/test_business_customer.py::test_business_change_cases[CP44-4-urbana-6-None-9700] - AssertionError: CP44
+assert 11000 == 9700
+ +  where 11000 = calc(4, 'urbana', 'empresarial', 6, None)
+============================== 6 failed in 0.15s ==============================
