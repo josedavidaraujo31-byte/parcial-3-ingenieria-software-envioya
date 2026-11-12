@@ -39,3 +39,7 @@ Para `CAMBIO=1`, incorporar el tipo de cliente `empresarial`, con 12 % de descue
 ## Evidencia
 
 Las pruebas nuevas se ejecutaron primero contra 2.0.0 y fallaron en los seis casos; el resultado está en `evidencia/pytest-cambio-business-red.txt`. Después de la implementación, la suite completa pasó: 64 pruebas y 100 % de cobertura de sentencias y ramas de `envios.py`. La ejecución está en `evidencia/pytest-business-suite.txt`.
+
+## Sustentación dinámica
+
+El defecto o cambio real de la sustentación debe ser entregado por el docente. No se inventa ni se presenta el simulacro local como evidencia del caso real. Cuando se reciba, se documentarán primero los criterios y pruebas, luego la implementación en una rama propia y su regresión.

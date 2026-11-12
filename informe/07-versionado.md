@@ -31,12 +31,6 @@ La suite final contiene los 38 casos CP01–CP38, cinco comprobaciones adicional
 
 La salida del comando `git log --oneline --graph --all` se adjunta en [`evidencia/git-log-point7.txt`](../evidencia/git-log-point7.txt).
 
-La salida de `git log --oneline --graph --all` sobre un clon limpio de las referencias publicadas hasta la versión 2.1.0 está en [`evidencia/git-log-point8.txt`](../evidencia/git-log-point8.txt). El clon de trabajo también contiene `practice/defecto-dinamico` y la etiqueta `practice-dynamic-v0.1.0`, usados solo para el simulacro; no se publicaron en GitHub ni forman parte de la versión del proyecto.
+La salida histórica de `git log --oneline --graph --all` sobre las referencias publicadas hasta la versión 2.1.0 está en [`evidencia/git-log-point8.txt`](../evidencia/git-log-point8.txt). El grafo actualizado de la entrega se adjuntará en un archivo separado después de publicar este informe.
 
 Los commits y sus marcas de tiempo son auténticos; no se modificaron ni retrofecharon para simular intervalos.
-
-## Parte 8 — Solicitud de cambio
-
-La rama `feature/empresarial` parte de `origin/main`. Primero se añadieron CP39–CP44 y se registró la ejecución roja contra 2.0.0; después se implementó el cambio. Al conservarse la firma de `calc`, corresponde un incremento minor a `2.1.0`. El impacto, los supuestos y la trazabilidad están en [`08-solicitud-cambio.md`](08-solicitud-cambio.md).
-
-La suite de regresión de esta parte contiene 64 pruebas aprobadas y mantiene 100 % de cobertura de sentencias y ramas en `envios.py`; véase [`evidencia/pytest-business-suite.txt`](../evidencia/pytest-business-suite.txt). La versión `v2.1.0` identifica el commit de integración de esta parte.
