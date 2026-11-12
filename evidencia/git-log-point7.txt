@@ -1,0 +1,36 @@
+$ git log --oneline --graph --all --decorate=short
+* 0735475 (HEAD -> main, tag: v2.0.0, origin/work/punto-7, origin/main, origin/HEAD) docs: document versioning and release 2.0.0
+*   d82971d merge: integrate test/suite
+|\
+| * 8ebbe45 (origin/test/suite) test: document the refactored calculation API
+|/
+*   e94d4b6 merge: integrate refactor/estrategia
+|\
+| * d592ee3 (origin/refactor/estrategia) test: verify zone pricing strategies
+|/
+*   f104e5c merge: integrate fix/DEF-04
+|\
+| * 830fbdb (origin/fix/DEF-04) test: add regression guard for DEF-04
+|/
+*   fbe61a8 merge: integrate fix/DEF-03
+|\
+| * 49248e2 (origin/fix/DEF-03) test: add regression guard for DEF-03
+|/
+*   b8c5368 merge: integrate fix/DEF-02
+|\
+| * 45cb5f9 (origin/fix/DEF-02) test: add regression guard for DEF-02
+|/
+*   84159a1 merge: integrate fix/DEF-01
+|\
+| * 4e73361 (origin/fix/DEF-01) test: add regression guard for DEF-01
+|/
+* c937a9a (origin/work/punto-6) refactor: correct and restructure EnvíaYa calculation
+* eea19ce test: attach inherited baseline pytest output
+* 56303e1 docs: report baseline test results and defects
+* c379fbd test: automate all black-box and flag-path cases
+* e1c30a6 (tag: v1.0.0) test: add legacy EnvíaYa calculation suite
+* 2d2973b Document analysis of 'calc' function in caja blanca
+* e2cc326 Create black box testing design document
+* a9b85ac Add testing plan documentation for EnvíaYa
+* 9a2fa1e docs: add personalized requirements and acceptance criteria
+* b65f8a5 Initial commit

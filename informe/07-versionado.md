@@ -5,7 +5,7 @@
 | Etiqueta | Commit | Contenido |
 |---|---|---|
 | `v1.0.0` | `e1c30a6` | Línea base heredada configurada, antes de corregir su lógica. |
-| `v2.0.0` | Commit de integración de esta entrega | Implementación corregida, refactorizada y regresión ampliada. |
+| `v2.0.0` | `0735475` | Implementación corregida, refactorizada y regresión ampliada. |
 
 `v2.0.0` es una versión **major**: se quitó el argumento público `flag` de `calc`, por lo que las llamadas antiguas que lo pasaban dejan de ser compatibles. La versión también corrige defectos visibles de cálculo. La etiqueta `v1.0.0` preserva el legado sin cambios, y `CHANGELOG.md` mantiene el formato Keep a Changelog.
 
