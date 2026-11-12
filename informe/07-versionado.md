@@ -31,6 +31,6 @@ La suite final contiene los 38 casos CP01–CP38, cinco comprobaciones adicional
 
 La salida del comando `git log --oneline --graph --all` se adjunta en [`evidencia/git-log-point7.txt`](../evidencia/git-log-point7.txt).
 
-La salida histórica de `git log --oneline --graph --all` sobre las referencias publicadas hasta la versión 2.1.0 está en [`evidencia/git-log-point8.txt`](../evidencia/git-log-point8.txt). El grafo actualizado de la entrega se adjuntará en un archivo separado después de publicar este informe.
+La salida histórica de `git log --oneline --graph --all` sobre las referencias publicadas hasta la versión 2.1.0 está en [`evidencia/git-log-point8.txt`](../evidencia/git-log-point8.txt). El grafo actualizado tras el commit `923e57e` está en [`evidencia/git-log-final.txt`](../evidencia/git-log-final.txt), generado con `git log --oneline --graph --decorate --all` desde un clon limpio de las referencias publicadas.
 
 Los commits y sus marcas de tiempo son auténticos; no se modificaron ni retrofecharon para simular intervalos.
