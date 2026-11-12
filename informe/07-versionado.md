@@ -31,6 +31,8 @@ La suite final contiene los 38 casos CP01–CP38, cinco comprobaciones adicional
 
 La salida del comando `git log --oneline --graph --all` se adjunta en [`evidencia/git-log-point7.txt`](../evidencia/git-log-point7.txt).
 
+La salida de `git log --oneline --graph --all` sobre un clon limpio de las referencias publicadas hasta la versión 2.1.0 está en [`evidencia/git-log-point8.txt`](../evidencia/git-log-point8.txt). El clon de trabajo también contiene `practice/defecto-dinamico` y la etiqueta `practice-dynamic-v0.1.0`, usados solo para el simulacro; no se publicaron en GitHub ni forman parte de la versión del proyecto.
+
 Los commits y sus marcas de tiempo son auténticos; no se modificaron ni retrofecharon para simular intervalos.
 
 ## Parte 8 — Solicitud de cambio

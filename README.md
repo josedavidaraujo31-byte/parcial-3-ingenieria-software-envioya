@@ -14,4 +14,4 @@ La suite debe pasar sobre la implementación refactorizada. El resultado previo 
 
 ## Versiones
 
-Consulta el [CHANGELOG](CHANGELOG.md), las [notas de v2.0.0](RELEASE_NOTES_v2.0.0.md) y el [informe de gestión de configuración](informe/07-versionado.md).
+Consulta el [CHANGELOG](CHANGELOG.md), las [notas de v2.0.0](RELEASE_NOTES_v2.0.0.md), las [notas de v2.1.0](RELEASE_NOTES_v2.1.0.md), el [análisis de impacto de la Parte 8](informe/08-solicitud-cambio.md) y el [informe de gestión de configuración](informe/07-versionado.md).
