@@ -10,4 +10,4 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -vv --tb=short --cov=envios --cov-branch --cov-report=term-missing
 ```
 
-La línea base de la función heredada contiene fallos esperados; consulta el informe de la Parte 5 en `informe/05-automatizacion-defectos.md`.
+La suite debe pasar sobre la implementación refactorizada. El resultado previo del código heredado y los defectos encontrados están documentados en `informe/05-automatizacion-defectos.md`; la refactorización y su comparación están en `informe/06-refactorizacion.md`.

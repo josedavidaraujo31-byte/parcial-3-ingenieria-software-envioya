@@ -1,0 +1,60 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Usuario\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Usuario\Downloads\parcial-3-ingenieria-software-envioya
+plugins: cov-7.1.0
+collecting ... collected 43 items
+
+tests/test_envios.py::test_cost_matches_specification[CP02-0.001-urbana-normal-1-None-6000] PASSED [  2%]
+tests/test_envios.py::test_cost_matches_specification[CP03-2.999-urbana-normal-1-None-6000] PASSED [  4%]
+tests/test_envios.py::test_cost_matches_specification[CP04-3-urbana-normal-1-None-6000] PASSED [  6%]
+tests/test_envios.py::test_cost_matches_specification[CP05-3.001-urbana-normal-1-None-9000] PASSED [  9%]
+tests/test_envios.py::test_cost_matches_specification[CP06-9.999-urbana-normal-1-None-9000] PASSED [ 11%]
+tests/test_envios.py::test_cost_matches_specification[CP07-10-urbana-normal-1-None-9000] PASSED [ 13%]
+tests/test_envios.py::test_cost_matches_specification[CP08-10.001-urbana-normal-1-None-9000] PASSED [ 16%]
+tests/test_envios.py::test_cost_matches_specification[CP09-10.0625-urbana-normal-1-None-9100] PASSED [ 18%]
+tests/test_envios.py::test_cost_matches_specification[CP10-50-urbana-normal-1-None-41000] PASSED [ 20%]
+tests/test_envios.py::test_cost_matches_specification[CP13-4-rural-normal-1-None-10800] PASSED [ 23%]
+tests/test_envios.py::test_cost_matches_specification[CP14-4-nacional-normal-1-None-12600] PASSED [ 25%]
+tests/test_envios.py::test_cost_matches_specification[CP15-4-urbana-normal-6-None-11000] PASSED [ 27%]
+tests/test_envios.py::test_cost_matches_specification[CP16-4-urbana-normal-7-None-11000] PASSED [ 30%]
+tests/test_envios.py::test_cost_matches_specification[CP17-4-urbana-normal-5-None-9000] PASSED [ 32%]
+tests/test_envios.py::test_cost_matches_specification[CP21-4-urbana-frecuente-1-None-8600] PASSED [ 34%]
+tests/test_envios.py::test_cost_matches_specification[CP22-4-urbana-vip-1-None-7700] PASSED [ 37%]
+tests/test_envios.py::test_cost_matches_specification[CP23-4-urbana-normal-1-ENVIO10-8100] PASSED [ 39%]
+tests/test_envios.py::test_cost_matches_specification[CP24-4-urbana-frecuente-1-ENVIO10-7700] PASSED [ 41%]
+tests/test_envios.py::test_cost_matches_specification[CP25-4-urbana-vip-1-ENVIO10-6900] PASSED [ 44%]
+tests/test_envios.py::test_cost_matches_specification[CP26-4-urbana-normal-1-OTRO-9000] PASSED [ 46%]
+tests/test_envios.py::test_cost_matches_specification[CP27-4-urbana-frecuente-6-ENVIO10-9400] PASSED [ 48%]
+tests/test_envios.py::test_cost_matches_specification[CP28-1-urbana-vip-1-ENVIO10-5000] PASSED [ 51%]
+tests/test_envios.py::test_cost_matches_specification[CP29-10.5-urbana-normal-1-None-9400] PASSED [ 53%]
+tests/test_envios.py::test_cost_matches_specification[CP30-4-urbana-normal-6-ENVIO10-9900] PASSED [ 55%]
+tests/test_envios.py::test_cost_matches_specification[CP31-4-urbana-normal-6-OTRO-11000] PASSED [ 58%]
+tests/test_envios.py::test_cost_matches_specification[CP32-4-urbana-frecuente-6-None-10500] PASSED [ 60%]
+tests/test_envios.py::test_cost_matches_specification[CP33-4-urbana-frecuente-5-OTRO-8600] PASSED [ 62%]
+tests/test_envios.py::test_cost_matches_specification[CP34-4-urbana-frecuente-6-OTRO-10500] PASSED [ 65%]
+tests/test_envios.py::test_cost_matches_specification[CP35-4-urbana-vip-6-None-9400] PASSED [ 67%]
+tests/test_envios.py::test_cost_matches_specification[CP36-4-urbana-vip-6-ENVIO10-8400] PASSED [ 69%]
+tests/test_envios.py::test_cost_matches_specification[CP37-4-urbana-vip-5-OTRO-7700] PASSED [ 72%]
+tests/test_envios.py::test_cost_matches_specification[CP38-4-urbana-vip-6-OTRO-9400] PASSED [ 74%]
+tests/test_envios.py::test_invalid_weight_raises_specified_error[CP01-0] PASSED [ 76%]
+tests/test_envios.py::test_invalid_weight_raises_specified_error[CP11-50.001] PASSED [ 79%]
+tests/test_envios.py::test_invalid_weight_raises_specified_error[CP12--0.001] PASSED [ 81%]
+tests/test_envios.py::test_invalid_zone_or_day_is_rejected[CP18-desconocida-1] PASSED [ 83%]
+tests/test_envios.py::test_invalid_zone_or_day_is_rejected[CP19-urbana-0] PASSED [ 86%]
+tests/test_envios.py::test_invalid_zone_or_day_is_rejected[CP20-urbana-8] PASSED [ 88%]
+tests/test_envios.py::test_non_finite_weight_is_rejected[weight0] PASSED [ 90%]
+tests/test_envios.py::test_non_finite_weight_is_rejected[weight1] PASSED [ 93%]
+tests/test_envios.py::test_day_must_be_an_integer[True] PASSED           [ 95%]
+tests/test_envios.py::test_day_must_be_an_integer[1.5] PASSED            [ 97%]
+tests/test_envios.py::test_day_must_be_an_integer[1] PASSED              [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.0-final-0 _______________
+
+Name        Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------
+envios.py      73      0     12      0   100%
+-------------------------------------------------------
+TOTAL          73      0     12      0   100%
+============================= 43 passed in 0.21s ==============================

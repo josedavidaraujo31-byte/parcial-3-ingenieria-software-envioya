@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 import pytest
 
 from envios import calc
@@ -68,6 +70,13 @@ def test_invalid_zone_or_day_is_rejected(case_id, zone, day):
         calc(4, zone, "normal", day)
 
 
-def test_legacy_flag_prints_cost(capsys):
-    assert calc(4, "urbana", "normal", 5, flag=True) == 9000
-    assert capsys.readouterr().out == "costo: 9000\n"
+@pytest.mark.parametrize("weight", [Decimal("NaN"), Decimal("Infinity")])
+def test_non_finite_weight_is_rejected(weight):
+    with pytest.raises(ValueError, match="peso inválido"):
+        calc(weight, "urbana", "normal", 1)
+
+
+@pytest.mark.parametrize("day", [True, 1.5, "1"])
+def test_day_must_be_an_integer(day):
+    with pytest.raises(ValueError, match="día inválido"):
+        calc(4, "urbana", "normal", day)
