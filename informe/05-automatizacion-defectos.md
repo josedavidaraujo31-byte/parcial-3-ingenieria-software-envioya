@@ -30,7 +30,7 @@ El 100 % medido corresponde a cobertura de sentencias y ramas del módulo `envio
 
 La salida completa de esta ejecución está guardada en [`evidencia/pytest-baseline-final.txt`](../evidencia/pytest-baseline-final.txt).
 
-Las capturas PNG exigidas para la entrega aún están pendientes; deben mostrar las ejecuciones auténticas de la línea base y la suite final.
+Las capturas auténticas de consola están guardadas en [`evidencia/pytest-baseline-capture.png`](../evidencia/pytest-baseline-capture.png) (línea base: 22 fallos y 17 aprobaciones) y [`evidencia/pytest-regression-capture.png`](../evidencia/pytest-regression-capture.png) (regresión: 64 aprobadas). La segunda ejecución se realizó desde la raíz del repositorio con `python -m pytest -q --tb=no --color=no`.
 
 ## Registro de defectos
 
