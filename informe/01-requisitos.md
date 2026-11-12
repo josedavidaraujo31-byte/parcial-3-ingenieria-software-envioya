@@ -1,7 +1,7 @@
 # Parte 1 — Requisitos y criterios de aceptación
 
-**Estudiante:** [escribir nombre]  
-**Código estudiantil:** [escribir código completo; últimos seis dígitos: 410026]
+- **Estudiante:** Jose David Araujo Molina
+- **Código estudiantil:** ***410026 (enmascarado para la versión pública)
 
 ## Parámetros personalizados
 

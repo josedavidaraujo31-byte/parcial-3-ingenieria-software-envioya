@@ -28,7 +28,9 @@ TOTAL          29      0     26      0   100%
 
 El 100 % medido corresponde a cobertura de sentencias y ramas del módulo `envios.py`; no significa que la implementación cumpla los requisitos. Las pruebas fallidas son evidencia de defectos. El porcentaje de casos que pasan en la línea base es `17 / 39 × 100 = 43,59 %`; fallan `22 / 39 × 100 = 56,41 %`.
 
-La salida completa de esta ejecución está guardada en [`evidencia/pytest-baseline.txt`](../evidencia/pytest-baseline.txt). No se reportan capturas de pantalla como si se hubieran tomado; deben adjuntarse desde el entorno donde se realice la entrega si el docente las exige.
+La salida completa de esta ejecución está guardada en [`evidencia/pytest-baseline-final.txt`](../evidencia/pytest-baseline-final.txt).
+
+Las capturas PNG exigidas para la entrega aún están pendientes; deben mostrar las ejecuciones auténticas de la línea base y la suite final.
 
 ## Registro de defectos
 
