@@ -11,3 +11,7 @@ python -m pytest -vv --tb=short --cov=envios --cov-branch --cov-report=term-miss
 ```
 
 La suite debe pasar sobre la implementación refactorizada. El resultado previo del código heredado y los defectos encontrados están documentados en `informe/05-automatizacion-defectos.md`; la refactorización y su comparación están en `informe/06-refactorizacion.md`.
+
+## Versiones
+
+Consulta el [CHANGELOG](CHANGELOG.md), las [notas de v2.0.0](RELEASE_NOTES_v2.0.0.md) y el [informe de gestión de configuración](informe/07-versionado.md).
