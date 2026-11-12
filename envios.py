@@ -13,6 +13,7 @@ RURAL_SURCHARGE_RATE = Decimal("0.20")
 NATIONAL_SURCHARGE_RATE = Decimal("0.40")
 FREQUENT_CUSTOMER_DISCOUNT = Decimal("0.05")
 VIP_CUSTOMER_DISCOUNT = Decimal("0.15")
+BUSINESS_CUSTOMER_DISCOUNT = Decimal("0.12")
 COUPON_DISCOUNT = Decimal("0.10")
 WEEKEND_SURCHARGE = Decimal("2000")
 MINIMUM_PRICE = Decimal("5000")
@@ -57,6 +58,7 @@ ZONE_STRATEGIES = {
 CUSTOMER_DISCOUNTS = {
     "frecuente": FREQUENT_CUSTOMER_DISCOUNT,
     "vip": VIP_CUSTOMER_DISCOUNT,
+    "empresarial": BUSINESS_CUSTOMER_DISCOUNT,
 }
 
 
@@ -113,7 +115,8 @@ def calc(
         raise ValueError("día inválido")
 
     amount = _calculate_base_price(weight)
-    amount = zone_strategy.apply(amount)
+    if not (customer_type == "empresarial" and weight > SECOND_WEIGHT_LIMIT):
+        amount = zone_strategy.apply(amount)
     if day in WEEKEND_DAYS:
         amount += WEEKEND_SURCHARGE
     amount = _apply_customer_discount(amount, customer_type)

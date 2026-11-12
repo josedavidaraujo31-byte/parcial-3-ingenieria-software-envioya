@@ -6,6 +6,7 @@
 |---|---|---|
 | `v1.0.0` | `e1c30a6` | Línea base heredada configurada, antes de corregir su lógica. |
 | `v2.0.0` | `0735475` | Implementación corregida, refactorizada y regresión ampliada. |
+| `v2.1.0` | commit de integración de la Parte 8 | Cliente empresarial y exención de recargo de zona por encima de L2; solicitud de cambio compatible. |
 
 `v2.0.0` es una versión **major**: se quitó el argumento público `flag` de `calc`, por lo que las llamadas antiguas que lo pasaban dejan de ser compatibles. La versión también corrige defectos visibles de cálculo. La etiqueta `v1.0.0` preserva el legado sin cambios, y `CHANGELOG.md` mantiene el formato Keep a Changelog.
 
@@ -31,3 +32,9 @@ La suite final contiene los 38 casos CP01–CP38, cinco comprobaciones adicional
 La salida del comando `git log --oneline --graph --all` se adjunta en [`evidencia/git-log-point7.txt`](../evidencia/git-log-point7.txt).
 
 Los commits y sus marcas de tiempo son auténticos; no se modificaron ni retrofecharon para simular intervalos.
+
+## Parte 8 — Solicitud de cambio
+
+La rama `feature/empresarial` parte de `origin/main`. Primero se añadieron CP39–CP44 y se registró la ejecución roja contra 2.0.0; después se implementó el cambio. Al conservarse la firma de `calc`, corresponde un incremento minor a `2.1.0`. El impacto, los supuestos y la trazabilidad están en [`08-solicitud-cambio.md`](08-solicitud-cambio.md).
+
+La suite de regresión de esta parte contiene 64 pruebas aprobadas y mantiene 100 % de cobertura de sentencias y ramas en `envios.py`; véase [`evidencia/pytest-business-suite.txt`](../evidencia/pytest-business-suite.txt). La versión `v2.1.0` identifica el commit de integración de esta parte.

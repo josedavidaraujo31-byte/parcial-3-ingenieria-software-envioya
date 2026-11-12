@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\Users\Usuario\Downloads\parcial-3-ingenieria-software-envioya
+plugins: cov-7.1.0
+collected 64 items
+
+tests\test_business_customer.py ......                                   [  9%]
+tests\test_def01_validation.py ...                                       [ 14%]
+tests\test_def02_weekend.py ...                                          [ 18%]
+tests\test_def03_rounding.py ...                                         [ 23%]
+tests\test_def04_error_message.py ..                                     [ 26%]
+tests\test_envios.py ...........................................         [ 93%]
+tests\test_public_api.py .                                               [ 95%]
+tests\test_zone_strategy.py ...                                          [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.0-final-0 _______________
+
+Name        Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------
+envios.py      75      0     14      0   100%
+-------------------------------------------------------
+TOTAL          75      0     14      0   100%
+============================= 64 passed in 0.32s ==============================

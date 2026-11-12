@@ -6,7 +6,7 @@
 |---|---|---|
 | Peso | `0 < p <= 50 kg` | `p <= 0`, `p > 50` |
 | Zona | `urbana`, `rural`, `nacional` | Cualquier otra zona: error según R2 |
-| Cliente | `normal`, `frecuente`, `vip` | Otro valor: comportamiento no definido en el enunciado; confirmar con el docente |
+| Cliente | `normal`, `frecuente`, `vip`, `empresarial` | Otro valor: comportamiento no definido en el enunciado; confirmar con el docente |
 | Día | Entero de 1 a 7 | Menor que 1 o mayor que 7: error según R2 |
 | Cupón | Ausente o `ENVIO10` | Desconocido: se ignora (F par) |
 
@@ -39,9 +39,11 @@ El recargo de fin de semana se agrega antes de los descuentos. Para B impar, se 
 
 La cobertura de las 18 combinaciones se identifica con las referencias CP15, CP17, CP21–CP27 y CP30–CP38 de la matriz.
 
+Para el cliente empresarial se comprueban por separado el descuento de 12 %, la regla estricta `peso > L2` para omitir el recargo de zona, y la interacción con cupón y fin de semana (CP39–CP44).
+
 ## Matriz de casos de prueba
 
-Entradas en orden: peso, zona, cliente, día, cupón. `—` indica cupón ausente. Los resultados son expectativas según R1–R8, no resultados observados del código heredado.
+Entradas en orden: peso, zona, cliente, día, cupón. `—` indica cupón ausente. Los resultados son expectativas según R1–R9, no resultados observados del código heredado.
 
 | ID | Req. | Entradas | Esperado | Técnica |
 |---|---|---|---:|---|
@@ -83,6 +85,12 @@ Entradas en orden: peso, zona, cliente, día, cupón. `—` indica cupón ausent
 | CP36 | R5/R6 | 4, urbana, vip, 6, ENVIO10 | $8.400 | Decisión: VIP/cupón/fin de semana |
 | CP37 | R6/R7 | 4, urbana, vip, 5, OTRO | $7.700 | Decisión: VIP/cupón desconocido |
 | CP38 | R5/R6/R7 | 4, urbana, vip, 6, OTRO | $9.400 | Decisión: VIP/desconocido/fin de semana |
+| CP39 | R9 | 4, urbana, empresarial, 1, — | $7.900 | Descuento empresarial |
+| CP40 | R4/R9 | 10, rural, empresarial, 1, — | $9.500 | L2 incluido: conserva recargo rural y aplica descuento |
+| CP41 | R3/R9 | 10,5, rural, empresarial, 1, — | $8.300 | Sobre L2: exención rural y descuento |
+| CP42 | R3/R9 | 10,5, nacional, empresarial, 1, — | $8.300 | Sobre L2: exención nacional y descuento |
+| CP43 | R6/R9 | 4, urbana, empresarial, 1, ENVIO10 | $7.100 | Descuentos empresarial y cupón secuenciales |
+| CP44 | R5/R9 | 4, urbana, empresarial, 6, — | $9.700 | Fin de semana antes del descuento empresarial |
 
 ## Cálculos manuales
 
@@ -91,5 +99,10 @@ Entradas en orden: peso, zona, cliente, día, cupón. `—` indica cupón ausent
 3. **CP24:** `$9.000 × 0,95 = $8.550`; luego `$8.550 × 0,90 = $7.695`; redondeo: **$7.700**.
 4. **CP27:** `$9.000 + $2.000 = $11.000`; frecuente: `$11.000 × 0,95 = $10.450`; cupón: `$10.450 × 0,90 = $9.405`; redondeo: **$9.400**.
 5. **CP28:** `$6.000 × 0,85 × 0,90 = $4.590`; aplicar mínimo: **$5.000**.
+6. **CP39:** `$9.000 × 0,88 = $7.920`; redondeo: **$7.900**.
+7. **CP40:** `$9.000 × 1,20 × 0,88 = $9.504`; redondeo: **$9.500**. Al ser exactamente L2, no se exime el recargo.
+8. **CP41/CP42:** `$9.000 + (10,5 - 10) × $800 = $9.400`; al superar L2 no se aplica recargo de zona; `$9.400 × 0,88 = $8.272`; redondeo: **$8.300**.
+9. **CP43:** `$9.000 × 0,88 × 0,90 = $7.128`; redondeo: **$7.100**.
+10. **CP44:** `($9.000 + $2.000) × 0,88 = $9.680`; redondeo: **$9.700**.
 
 **Pendiente:** el resultado de un tipo de cliente no reconocido requiere confirmación; no se asigna expectativa hasta aclararlo.

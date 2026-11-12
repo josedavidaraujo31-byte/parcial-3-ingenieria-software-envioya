@@ -2,7 +2,7 @@
 
 ## Alcance
 
-Se verificará el cálculo de EnvíaYa para PMAX=50 kg, L1=3 kg, L2=10 kg, recargo rural=20 %, recargo nacional=40 %, descuento VIP=15 % y recargo de fin de semana=$2.000. El alcance incluye R1–R8, la función heredada y la versión corregida. Los pagos, la persistencia, la interfaz gráfica y los servicios externos quedan fuera del alcance porque el enunciado no los define.
+Se verificará el cálculo de EnvíaYa para PMAX=50 kg, L1=3 kg, L2=10 kg, recargo rural=20 %, recargo nacional=40 %, descuento VIP=15 %, descuento empresarial=12 % y recargo de fin de semana=$2.000. El alcance incluye R1–R9, la función heredada, la versión corregida y la solicitud empresarial. Los pagos, la persistencia, la interfaz gráfica y los servicios externos quedan fuera del alcance porque el enunciado no los define.
 
 ## Niveles de prueba
 
@@ -23,9 +23,9 @@ Se verificará el cálculo de EnvíaYa para PMAX=50 kg, L1=3 kg, L2=10 kg, recar
 
 ## Ambiente y datos
 
-Python 3, pytest y pytest-cov en entorno local, sin dependencias de red ni servicios externos. La configuración de prueba será L1=3, L2=10, recargo rural=0.20, recargo nacional=0.40, descuento VIP=0.15 y recargo fin de semana=$2.000. Se probarán pesos alrededor de 0, 3, 10 y 50 kg; zonas válidas e inválidas; días 1, 6, 7 y fuera del intervalo; clientes definidos; y cupón ausente, válido o desconocido.
+Python 3, pytest y pytest-cov en entorno local, sin dependencias de red ni servicios externos. La configuración de prueba será L1=3, L2=10, recargo rural=0.20, recargo nacional=0.40, descuentos VIP=0.15 y empresarial=0.12, y recargo fin de semana=$2.000. Se probarán pesos alrededor de 0, 3, 10 y 50 kg; zonas válidas e inválidas; días 1, 6, 7 y fuera del intervalo; clientes normal, frecuente, VIP y empresarial; y cupón ausente, válido o desconocido.
 
-El enunciado no establece qué hacer con un valor de cliente distinto de normal, frecuente o VIP. Se dejará pendiente de confirmación y no se afirmará que un resultado supuesto proviene literalmente de R1–R8.
+Se probará el cliente empresarial en L2 exacto y por encima de L2, en zonas rural y nacional, con cupón y en fin de semana. El enunciado no establece qué hacer con valores de cliente distintos de normal, frecuente, VIP o empresarial; ese comportamiento queda pendiente de confirmación.
 
 ## Roles
 
@@ -43,6 +43,7 @@ El enunciado no establece qué hacer con un valor de cliente distinto de normal,
 | La refactorización altera resultados | Ejecutar la misma suite antes y después y comparar. |
 | Cobertura alta pero poca utilidad | Priorizar cobertura de requisitos y ramas, no solo el porcentaje de líneas. |
 | Cliente inválido sin comportamiento definido | Confirmarlo con el docente antes de establecer expectativa. |
+| Interpretar como `>= L2` la exención de zona | Probar exactamente 10 kg y 10,5 kg en zona con recargo (CP40–CP42). |
 
 ## Criterios de entrada y salida
 
@@ -50,4 +51,4 @@ El enunciado no establece qué hacer con un valor de cliente distinto de normal,
 
 **Salida de la línea base:** suite ejecutada, fallos reproducibles vinculados a requisitos, defectos registrados y cobertura medida.
 
-**Salida después de corregir:** pasan todos los casos de R1–R8, no quedan defectos críticos o altos abiertos, la trazabilidad está actualizada y la cobertura real de sentencias y ramas está medida y reportada. La meta es cubrir todas las ramas relevantes de la función o justificar las no cubiertas.
+**Salida después de corregir:** pasan todos los casos de R1–R9, no quedan defectos críticos o altos abiertos, la trazabilidad está actualizada y la cobertura real de sentencias y ramas está medida y reportada. La meta es cubrir todas las ramas relevantes de la función o justificar las no cubiertas.
